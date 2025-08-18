@@ -81,7 +81,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Fence Installation</h3>
               <p className="text-gray-600 mb-6">
                 Professional installation of wood, vinyl, aluminum, and chain-link fences. 
-                Custom designs to match your property's style.
+                Custom designs to match your property&apos;s style.
               </p>
               <a href="#contact" className="text-blue-600 font-semibold hover:text-blue-800">
                 Get Quote →
@@ -267,8 +267,8 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-700 mb-4">
-                "Premier Fencing did an amazing job on our privacy fence. Professional, 
-                on-time, and the quality is outstanding. Highly recommend!"
+                &ldquo;Premier Fencing did an amazing job on our privacy fence. Professional, 
+                on-time, and the quality is outstanding. Highly recommend!&rdquo;
               </p>
               <p className="font-semibold text-gray-900">- Sarah M.</p>
             </div>
@@ -282,8 +282,8 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-700 mb-4">
-                "Fast service, fair pricing, and excellent workmanship. They repaired 
-                our damaged fence quickly and it looks better than new."
+                &ldquo;Fast service, fair pricing, and excellent workmanship. They repaired 
+                our damaged fence quickly and it looks better than new.&rdquo;
               </p>
               <p className="font-semibold text-gray-900">- Mike R.</p>
             </div>
@@ -297,8 +297,8 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-700 mb-4">
-                "Outstanding customer service from start to finish. The team was 
-                professional, clean, and completed our project ahead of schedule."
+                &ldquo;Outstanding customer service from start to finish. The team was 
+                professional, clean, and completed our project ahead of schedule.&rdquo;
               </p>
               <p className="font-semibold text-gray-900">- Jennifer L.</p>
             </div>
@@ -325,7 +325,7 @@ export default function Home() {
               </h3>
               <p className="text-gray-600">
                 Most residential fence installations take 1-3 days depending on the size and complexity. 
-                We'll provide a detailed timeline during your consultation.
+                We&apos;ll provide a detailed timeline during your consultation.
               </p>
             </div>
             
