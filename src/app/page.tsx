@@ -5,141 +5,65 @@ import { siteConfig } from './config';
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Modern Sticky Header with Glass Effect */}
-      <header className="bg-white/80 backdrop-blur-md shadow-xl sticky top-0 z-50 border-b border-gray-200/50">
+      {/* Sticky Header with Phone + CTA */}
+      <header className="bg-white shadow-lg sticky top-0 z-50 border-b-2 border-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <div className="flex items-center space-x-6">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                </div>
-                <div>
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-700 to-green-600 bg-clip-text text-transparent">
-                    {siteConfig.brand.name}
-                  </h1>
-                  <p className="text-sm text-gray-600 font-medium">{siteConfig.brand.tagline}</p>
-                </div>
-              </div>
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center space-x-4">
+              <h1 className="text-2xl font-bold text-gray-800">{siteConfig.brand.name}</h1>
+              <span className="hidden md:block text-sm text-gray-600">| {siteConfig.brand.address}</span>
             </div>
-            
-            <div className="flex items-center space-x-6">
-              <div className="hidden lg:block text-right">
-                <p className="text-xs text-gray-500 uppercase tracking-wider font-medium">Call Now</p>
-                <a href={`tel:${siteConfig.brand.phone}`} className="text-lg font-bold text-blue-600 hover:text-blue-700 transition-colors duration-300">
+            <div className="flex items-center space-x-4">
+              <div className="hidden md:block text-right">
+                <p className="text-sm text-gray-600">Call Now</p>
+                <a href={`tel:${siteConfig.brand.phone}`} className="text-lg font-bold text-blue-600 hover:text-blue-800">
                   {siteConfig.brand.phone}
                 </a>
               </div>
-              
               <a 
                 href="#contact" 
-                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg group relative overflow-hidden"
+                className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-lg"
               >
-                <span className="relative z-10">Free Quote</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                Free Quote
               </a>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Modern Hero Section with Sophisticated Design */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-green-900">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle,#6b7280_1px,transparent_1px)] bg-[length:20px_20px]"></div>
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-green-500/20 rounded-full blur-3xl animate-pulse"></div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <div className="opacity-0 animate-fade-in-up">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
-              <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-              <span className="text-white/90 text-sm font-medium">Serving the Treasure Valley since 1999</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-tight">
-              <span className="block">Boise&apos;s Premier</span>
-              <span className="block bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">Fencing Experts</span>
-            </h1>
-            
-            <p className="text-xl leading-relaxed text-white/90 max-w-4xl mx-auto mb-12">
-              Transform your property with professional fence installation, repair, and maintenance. 
-              Serving the entire Treasure Valley with {siteConfig.brand.yearsExperience} years of expertise 
-              and {siteConfig.brand.projectsCompleted} successful projects.
+      {/* Hero Section with Strong Value Prop */}
+      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+              Boise&apos;s #1 Fencing Company
+            </h2>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              Professional fence installation, repair, and maintenance serving the entire Treasure Valley. 
+              {siteConfig.brand.yearsExperience} years of experience, {siteConfig.brand.projectsCompleted} projects completed.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a 
                 href={`tel:${siteConfig.brand.phone}`}
-                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg group relative overflow-hidden"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg flex items-center justify-center"
               >
-                <span className="relative z-10 flex items-center">
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  Call {siteConfig.brand.phone}
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-              </a>
-              
-              <a 
+                📞 Call {siteConfig.brand.phone}
+          </a>
+          <a
                 href="#contact" 
-                className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition duration-300"
               >
-                <span className="flex items-center">
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  Get Free Estimate
-                </span>
+                ✨ Get Free Estimate
               </a>
             </div>
-          </div>
-          
-          {/* Trust Indicators */}
-          <div className="opacity-0 animate-fade-in-up-delayed">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 max-w-4xl mx-auto p-8">
-              <p className="text-lg font-semibold text-white mb-6 flex items-center justify-center">
-                <svg className="w-6 h-6 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Why Choose Premier Fencing?
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <p className="text-white/90 text-sm font-medium">{siteConfig.brand.license}</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <p className="text-white/90 text-sm font-medium">{siteConfig.brand.yearsExperience} Years Experience</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                    </svg>
-                  </div>
-                  <p className="text-white/90 text-sm font-medium">Free Estimates</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-white/90 text-sm font-medium">Same Day Service</p>
-                </div>
+            <div className="bg-white bg-opacity-10 rounded-lg p-6 max-w-2xl mx-auto">
+              <p className="text-lg font-semibold mb-2">🏆 Why Choose Us?</p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                <div>✅ {siteConfig.brand.license}</div>
+                <div>✅ {siteConfig.brand.yearsExperience} Years Experience</div>
+                <div>✅ Free Estimates</div>
+                <div>✅ Same Day Service Available</div>
               </div>
             </div>
           </div>
@@ -229,8 +153,8 @@ export default function Home() {
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg"
             >
               📞 Call {siteConfig.brand.phone}
-            </a>
-            <a 
+        </a>
+        <a
               href="#contact" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition duration-300"
             >
@@ -409,8 +333,8 @@ export default function Home() {
               className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg"
             >
               📞 Call Now
-            </a>
-            <a 
+        </a>
+        <a
               href="#contact" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition duration-300"
             >
