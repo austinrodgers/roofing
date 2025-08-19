@@ -6,39 +6,39 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Modern Sticky Header with Glass Effect */}
-      <header className="bg-white/80 backdrop-blur-md shadow-xl sticky top-0 z-50 border-b border-neutral-200/50">
-        <div className="container-modern">
+      <header className="bg-white/80 backdrop-blur-md shadow-xl sticky top-0 z-50 border-b border-gray-200/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-accent-600 rounded-xl flex items-center justify-center shadow-lg">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
                 <div>
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-primary-700 to-accent-600 bg-clip-text text-transparent">
+                  <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-700 to-green-600 bg-clip-text text-transparent">
                     {siteConfig.brand.name}
                   </h1>
-                  <p className="text-sm text-neutral-600 font-medium">{siteConfig.brand.tagline}</p>
+                  <p className="text-sm text-gray-600 font-medium">{siteConfig.brand.tagline}</p>
                 </div>
               </div>
             </div>
             
             <div className="flex items-center space-x-6">
               <div className="hidden lg:block text-right">
-                <p className="text-xs text-neutral-500 uppercase tracking-wider font-medium">Call Now</p>
-                <a href={`tel:${siteConfig.brand.phone}`} className="text-lg font-bold text-primary-600 hover:text-primary-700 transition-colors duration-300">
+                <p className="text-xs text-gray-500 uppercase tracking-wider font-medium">Call Now</p>
+                <a href={`tel:${siteConfig.brand.phone}`} className="text-lg font-bold text-blue-600 hover:text-blue-700 transition-colors duration-300">
                   {siteConfig.brand.phone}
                 </a>
               </div>
               
               <a 
                 href="#contact" 
-                className="btn-primary group relative overflow-hidden"
+                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg group relative overflow-hidden"
               >
                 <span className="relative z-10">Free Quote</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-accent-600 to-accent-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </a>
             </div>
           </div>
@@ -46,25 +46,25 @@ export default function Home() {
       </header>
 
       {/* Modern Hero Section with Sophisticated Design */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-900 via-primary-900 to-accent-900">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-green-900">
         {/* Animated Background Elements */}
-        <div className="absolute inset-0 bg-pattern-dots opacity-10"></div>
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle,#6b7280_1px,transparent_1px)] bg-[length:20px_20px]"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-green-500/20 rounded-full blur-3xl animate-pulse"></div>
         
-        <div className="relative container-modern text-center z-10">
-          <div className="animate-fade-in-up">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+          <div className="opacity-0 animate-fade-in-up">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
-              <span className="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></span>
+              <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
               <span className="text-white/90 text-sm font-medium">Serving the Treasure Valley since 1999</span>
             </div>
             
-            <h1 className="heading-hero text-white mb-8 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-tight">
               <span className="block">Boise&apos;s Premier</span>
-              <span className="block gradient-text">Fencing Experts</span>
+              <span className="block bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">Fencing Experts</span>
             </h1>
             
-            <p className="text-body text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
+            <p className="text-xl leading-relaxed text-white/90 max-w-4xl mx-auto mb-12">
               Transform your property with professional fence installation, repair, and maintenance. 
               Serving the entire Treasure Valley with {siteConfig.brand.yearsExperience} years of expertise 
               and {siteConfig.brand.projectsCompleted} successful projects.
@@ -73,7 +73,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <a 
                 href={`tel:${siteConfig.brand.phone}`}
-                className="btn-primary group relative overflow-hidden text-lg px-10 py-4"
+                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg group relative overflow-hidden"
               >
                 <span className="relative z-10 flex items-center">
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,12 +81,12 @@ export default function Home() {
                   </svg>
                   Call {siteConfig.brand.phone}
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-accent-600 to-accent-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </a>
               
               <a 
                 href="#contact" 
-                className="btn-outline text-lg px-10 py-4 group"
+                className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <span className="flex items-center">
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,26 +99,26 @@ export default function Home() {
           </div>
           
           {/* Trust Indicators */}
-          <div className="animate-fade-in-up animate-delay-300">
-            <div className="card-glass max-w-4xl mx-auto p-8">
+          <div className="opacity-0 animate-fade-in-up-delayed">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 max-w-4xl mx-auto p-8">
               <p className="text-lg font-semibold text-white mb-6 flex items-center justify-center">
-                <svg className="w-6 h-6 text-accent-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 Why Choose Premier Fencing?
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-accent-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <svg className="w-6 h-6 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <p className="text-white/90 text-sm font-medium">{siteConfig.brand.license}</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <svg className="w-6 h-6 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
