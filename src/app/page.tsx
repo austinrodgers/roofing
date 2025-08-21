@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { siteConfig } from './config';
 
 export default function Home() {
@@ -31,14 +32,46 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Debug Image Test */}
+      <div className="bg-yellow-100 p-4 text-center">
+        <p className="text-sm text-gray-700">Testing image loading...</p>
+        <div className="flex justify-center space-x-4 mt-2">
+          <div className="w-20 h-20 relative">
+            <Image 
+              src="/pictures/Residential fence.jpg" 
+              alt="Test"
+              fill
+              className="object-cover rounded"
+              onLoad={() => console.log('Residential fence loaded successfully')}
+              onError={(e) => console.error('Residential fence failed:', e)}
+            />
+          </div>
+          <div className="w-20 h-20 relative">
+            <Image 
+              src="/pictures/pool fence.jpg" 
+              alt="Test"
+              fill
+              className="object-cover rounded"
+              onLoad={() => console.log('Pool fence loaded successfully')}
+              onError={(e) => console.error('Pool fence failed:', e)}
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section with Strong Value Prop */}
       <section className="relative text-white overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
+          <Image 
             src="/pictures/Hero 2.jpg" 
             alt="Professional fencing installation in Boise, Idaho"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
+            onError={(e) => {
+              console.error('Hero image failed to load:', e);
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/80"></div>
         </div>
@@ -187,11 +220,15 @@ export default function Home() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-64 overflow-hidden">
-                <img 
+              <div className="h-64 overflow-hidden relative">
+                <Image 
                   src="/pictures/Residential fence.jpg" 
                   alt="Modern privacy fence installation in Eagle, Idaho"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  onError={(e) => {
+                    console.error('Residential fence image failed to load:', e);
+                  }}
                 />
               </div>
               <div className="p-6">
@@ -202,11 +239,15 @@ export default function Home() {
             </div>
             
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-64 overflow-hidden">
-                <img 
+              <div className="h-64 overflow-hidden relative">
+                <Image 
                   src="/pictures/pool fence.jpg" 
                   alt="Safety-compliant pool fencing in Meridian, Idaho"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  onError={(e) => {
+                    console.error('Pool fence image failed to load:', e);
+                  }}
                 />
               </div>
               <div className="p-6">
@@ -217,11 +258,15 @@ export default function Home() {
             </div>
             
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-64 overflow-hidden">
-                <img 
+              <div className="h-64 overflow-hidden relative">
+                <Image 
                   src="/pictures/Commerical fence.jpeg" 
                   alt="Commercial security fencing in Nampa, Idaho"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  onError={(e) => {
+                    console.error('Commercial fence image failed to load:', e);
+                  }}
                 />
               </div>
               <div className="p-6">
@@ -248,11 +293,15 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
-              <div className="h-80 overflow-hidden">
-                <img 
+              <div className="h-80 overflow-hidden relative">
+                <Image 
                   src="/pictures/pic 1.jpg" 
                   alt="Professional fence installation project in Boise area"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  onError={(e) => {
+                    console.error('Pic 1 image failed to load:', e);
+                  }}
                 />
               </div>
               <div className="p-6">
@@ -262,11 +311,15 @@ export default function Home() {
             </div>
             
             <div className="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
-              <div className="h-80 overflow-hidden">
-                <img 
+              <div className="h-80 overflow-hidden relative">
+                <Image 
                   src="/pictures/pic 2.jpg" 
                   alt="Professional fence installation project in Treasure Valley"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  onError={(e) => {
+                    console.error('Pic 2 image failed to load:', e);
+                  }}
                 />
               </div>
               <div className="p-6">
