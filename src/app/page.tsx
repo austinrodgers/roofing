@@ -72,13 +72,13 @@ export default function Home() {
                 ✨ Get Free Estimate
               </a>
             </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto border border-white/20">
-              <p className="text-lg font-semibold mb-2">🏆 Why Choose Us?</p>
+            <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto border border-white/20 shadow-lg">
+              <p className="text-lg font-semibold mb-2 text-gray-800">🏆 Why Choose Us?</p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                <div>✅ {siteConfig.brand.license}</div>
-                <div>✅ {siteConfig.brand.yearsExperience} Years Experience</div>
-                <div>✅ Free Estimates</div>
-                <div>✅ Same Day Service Available</div>
+                <div className="text-gray-700 font-medium">✅ {siteConfig.brand.license}</div>
+                <div className="text-gray-700 font-medium">✅ {siteConfig.brand.yearsExperience} Years Experience</div>
+                <div className="text-gray-700 font-medium">✅ Free Estimates</div>
+                <div className="text-gray-700 font-medium">✅ Same Day Service Available</div>
               </div>
             </div>
           </div>
@@ -318,7 +318,7 @@ export default function Home() {
               Trusted by {siteConfig.brand.projectsCompleted} Boise Homeowners
             </h2>
           </div>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-4xl font-bold text-blue-600 mb-2">{siteConfig.brand.yearsExperience}</div>
               <p className="text-gray-600">Years Experience</p>
@@ -327,7 +327,6 @@ export default function Home() {
               <div className="text-4xl font-bold text-green-600 mb-2">{siteConfig.brand.projectsCompleted}</div>
               <p className="text-gray-600">Projects Completed</p>
             </div>
-            {/* Removed Satisfaction Rate block as requested */}
             <div className="text-center">
               <div className="text-4xl font-bold text-orange-600 mb-2">24hr</div>
               <p className="text-gray-600">Response Time</p>
