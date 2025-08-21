@@ -32,33 +32,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Debug Image Test */}
-      <div className="bg-yellow-100 p-4 text-center">
-        <p className="text-sm text-gray-700">Testing image loading...</p>
-        <div className="flex justify-center space-x-4 mt-2">
-          <div className="w-20 h-20 relative">
-            <Image 
-              src="/pictures/Residential fence.jpg" 
-              alt="Test"
-              fill
-              className="object-cover rounded"
-              onLoad={() => console.log('Residential fence loaded successfully')}
-              onError={(e) => console.error('Residential fence failed:', e)}
-            />
-          </div>
-          <div className="w-20 h-20 relative">
-            <Image 
-              src="/pictures/pool fence.jpg" 
-              alt="Test"
-              fill
-              className="object-cover rounded"
-              onLoad={() => console.log('Pool fence loaded successfully')}
-              onError={(e) => console.error('Pool fence failed:', e)}
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Hero Section with Strong Value Prop */}
       <section className="relative text-white overflow-hidden">
         {/* Background Image */}
@@ -113,26 +86,32 @@ export default function Home() {
       </section>
 
       {/* Service Areas Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 bg-gray-50 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image 
+            src="/pictures/treasure valley.jpg" 
+            alt="Treasure Valley landscape"
+            fill
+            className="object-cover opacity-20"
+          />
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Serving the Entire Treasure Valley
             </h2>
             <p className="text-xl text-gray-600">
-              Professional fencing services throughout {siteConfig.brand.serviceArea}
+              Professional fencing services throughout {siteConfig.locations.join(', ')}
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {siteConfig.locations.map((location) => (
-              <div key={location} className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition duration-300">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <h3 className="font-semibold text-gray-900">{location}</h3>
+              <div key={location} className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                <div className="text-blue-500 text-3xl mb-3">📍</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{location}</h3>
                 <p className="text-sm text-gray-600">Fencing Services</p>
               </div>
             ))}
@@ -233,7 +212,7 @@ export default function Home() {
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Modern Privacy Fence - Eagle, ID</h3>
-                <p className="text-gray-600 mb-3">6-foot cedar privacy fence with custom gate design</p>
+                <p className="text-gray-600 mb-3">6-foot cedar privacy fence</p>
                 <p className="text-sm text-blue-600 font-semibold">Completed in 2 days</p>
               </div>
             </div>
@@ -336,7 +315,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Trusted by {siteConfig.brand.projectsCompleted}+ Boise Homeowners
+              Trusted by {siteConfig.brand.projectsCompleted} Boise Homeowners
             </h2>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
@@ -348,10 +327,7 @@ export default function Home() {
               <div className="text-4xl font-bold text-green-600 mb-2">{siteConfig.brand.projectsCompleted}</div>
               <p className="text-gray-600">Projects Completed</p>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
-              <p className="text-gray-600">Satisfaction Rate</p>
-            </div>
+            {/* Removed Satisfaction Rate block as requested */}
             <div className="text-center">
               <div className="text-4xl font-bold text-orange-600 mb-2">24hr</div>
               <p className="text-gray-600">Response Time</p>

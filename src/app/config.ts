@@ -34,13 +34,12 @@ export const siteConfig = {
   ],
   locations: [
     "Boise",
-    "Meridian", 
+    "Meridian",
     "Nampa",
     "Eagle",
     "Caldwell",
     "Garden City",
     "Kuna",
-    "Star",
-    "Middleton"
+    "Star"
   ]
 };
