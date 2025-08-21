@@ -32,8 +32,17 @@ export default function Home() {
       </header>
 
       {/* Hero Section with Strong Value Prop */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
+      <section className="relative text-white overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/pictures/Hero 2.jpg" 
+            alt="Professional fencing installation in Boise, Idaho"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/80"></div>
+        </div>
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h2 className="text-4xl md:text-6xl font-bold mb-6">
@@ -49,15 +58,15 @@ export default function Home() {
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg flex items-center justify-center"
               >
                 📞 Call {siteConfig.brand.phone}
-          </a>
-          <a
+              </a>
+              <a 
                 href="#contact" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition duration-300"
               >
                 ✨ Get Free Estimate
               </a>
             </div>
-            <div className="bg-white bg-opacity-10 rounded-lg p-6 max-w-2xl mx-auto">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto border border-white/20">
               <p className="text-lg font-semibold mb-2">🏆 Why Choose Us?</p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                 <div>✅ {siteConfig.brand.license}</div>
@@ -178,13 +187,12 @@ export default function Home() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-16 h-16 text-blue-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <p className="text-blue-600 font-semibold">Project Image</p>
-                </div>
+              <div className="h-64 overflow-hidden">
+                <img 
+                  src="/pictures/Residential fence.jpg" 
+                  alt="Modern privacy fence installation in Eagle, Idaho"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Modern Privacy Fence - Eagle, ID</h3>
@@ -194,13 +202,12 @@ export default function Home() {
             </div>
             
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-64 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-16 h-16 text-green-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <p className="text-green-600 font-semibold">Project Image</p>
-                </div>
+              <div className="h-64 overflow-hidden">
+                <img 
+                  src="/pictures/pool fence.jpg" 
+                  alt="Safety-compliant pool fencing in Meridian, Idaho"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Pool Safety Fence - Meridian, ID</h3>
@@ -210,18 +217,61 @@ export default function Home() {
             </div>
             
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-64 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-16 h-16 text-purple-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <p className="text-purple-600 font-semibold">Project Image</p>
-                </div>
+              <div className="h-64 overflow-hidden">
+                <img 
+                  src="/pictures/Commerical fence.jpeg" 
+                  alt="Commercial security fencing in Nampa, Idaho"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Commercial Security Fence - Nampa, ID</h3>
                 <p className="text-gray-600 mb-3">High-security fencing for business property protection</p>
                 <p className="text-sm text-purple-600 font-semibold">Industrial grade</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Work Showcase */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              More of Our Quality Work
+            </h2>
+            <p className="text-xl text-gray-600">
+              See additional examples of our craftsmanship throughout the Treasure Valley
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+              <div className="h-80 overflow-hidden">
+                <img 
+                  src="/pictures/pic 1.jpg" 
+                  alt="Professional fence installation project in Boise area"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Custom Fence Design</h3>
+                <p className="text-gray-600">Beautiful custom fencing solution showcasing our attention to detail and quality materials.</p>
+              </div>
+            </div>
+            
+            <div className="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+              <div className="h-80 overflow-hidden">
+                <img 
+                  src="/pictures/pic 2.jpg" 
+                  alt="Professional fence installation project in Treasure Valley"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Expert Installation</h3>
+                <p className="text-gray-600">Professional fence installation demonstrating our skilled craftsmanship and precision work.</p>
               </div>
             </div>
           </div>
