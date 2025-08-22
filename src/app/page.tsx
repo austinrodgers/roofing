@@ -2,34 +2,111 @@
 
 import Image from 'next/image';
 import { siteConfig } from './config';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
-  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      const headerHeight = 80; // Approximate height of sticky header
-      const elementPosition = contactSection.offsetTop - headerHeight;
-      
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
-      });
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
     }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen]);
+  const scrollToSection = (sectionId: string, e?: React.MouseEvent<HTMLAnchorElement>) => {
+    if (e) e.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const headerHeight = 80; // Approximate height of sticky header
+      const elementPosition = section.offsetTop - headerHeight;
+      const currentPosition = window.pageYOffset;
+      const distance = elementPosition - currentPosition;
+      const duration = 1500; // 1.5 seconds for smoother, slower scrolling
+      
+      const startTime = performance.now();
+      
+      const animateScroll = (currentTime: number) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Easing function for smooth acceleration/deceleration
+        const easeInOutCubic = (t: number) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        const easedProgress = easeInOutCubic(progress);
+        
+        window.scrollTo(0, currentPosition + distance * easedProgress);
+        
+        if (progress < 1) {
+          requestAnimationFrame(animateScroll);
+        }
+      };
+      
+      requestAnimationFrame(animateScroll);
+      setIsMenuOpen(false); // Close menu after clicking
+    }
+  };
+
+  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    scrollToSection('contact', e);
   };
 
   return (
     <main className="min-h-screen">
       {/* Sticky Header with Phone + CTA */}
       <header className="bg-white shadow-lg sticky top-0 z-50 border-b-2 border-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div ref={menuRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
+            {/* Logo and Company Name */}
             <div className="flex items-center space-x-4">
               <h1 className="text-2xl font-bold text-gray-800">{siteConfig.brand.name}</h1>
-              <span className="hidden md:block text-sm text-gray-600">| {siteConfig.brand.address}</span>
+              <span className="hidden lg:block text-sm text-gray-600">| {siteConfig.brand.address}</span>
             </div>
-            <div className="flex items-center space-x-4">
-              <div className="hidden md:block text-right">
+
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
+              <a 
+                href="#services" 
+                onClick={(e) => scrollToSection('services', e)}
+                className="text-gray-700 hover:text-blue-600 font-medium transition duration-300 cursor-pointer"
+              >
+                Services
+              </a>
+              <a 
+                href="#work" 
+                onClick={(e) => scrollToSection('work', e)}
+                className="text-gray-700 hover:text-blue-600 font-medium transition duration-300 cursor-pointer"
+              >
+                Gallery
+              </a>
+              <a 
+                href="#reviews" 
+                onClick={(e) => scrollToSection('reviews', e)}
+                className="text-gray-700 hover:text-blue-600 font-medium transition duration-300 cursor-pointer"
+              >
+                Reviews
+              </a>
+              <a 
+                href="#faq" 
+                onClick={(e) => scrollToSection('faq', e)}
+                className="text-gray-700 hover:text-blue-600 font-medium transition duration-300 cursor-pointer"
+              >
+                FAQ
+              </a>
+            </nav>
+
+            {/* Desktop Contact Info and CTA */}
+            <div className="hidden md:flex items-center space-x-4">
+              <div className="text-right">
                 <p className="text-sm text-gray-600">Call Now</p>
                 <a href={`tel:${siteConfig.brand.phone}`} className="text-lg font-bold text-blue-600 hover:text-blue-800">
                   {siteConfig.brand.phone}
@@ -43,6 +120,68 @@ export default function Home() {
                 Free Quote
               </a>
             </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden flex items-center space-x-3">
+              <a 
+                href="#contact" 
+                onClick={scrollToContact}
+                className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-lg cursor-pointer text-sm"
+              >
+                Quote
+              </a>
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="p-2 rounded-lg hover:bg-gray-100 transition duration-300"
+                aria-label="Toggle menu"
+              >
+                <div className="w-6 h-6 flex flex-col justify-center items-center">
+                  <span className={`w-5 h-0.5 bg-gray-700 transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+                  <span className={`w-5 h-0.5 bg-gray-700 transition-all duration-300 mt-1 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+                  <span className={`w-5 h-0.5 bg-gray-700 transition-all duration-300 mt-1 ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Menu */}
+          <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+            <nav className="py-4 space-y-3 border-t border-gray-200">
+              <a 
+                href="#services" 
+                onClick={(e) => scrollToSection('services', e)}
+                className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition duration-300 cursor-pointer"
+              >
+                🏗️ Services
+              </a>
+              <a 
+                href="#work" 
+                onClick={(e) => scrollToSection('work', e)}
+                className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition duration-300 cursor-pointer"
+              >
+                🖼️ Gallery
+              </a>
+              <a 
+                href="#reviews" 
+                onClick={(e) => scrollToSection('reviews', e)}
+                className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition duration-300 cursor-pointer"
+              >
+                ⭐ Reviews
+              </a>
+              <a 
+                href="#faq" 
+                onClick={(e) => scrollToSection('faq', e)}
+                className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition duration-300 cursor-pointer"
+              >
+                ❓ FAQ
+              </a>
+              <div className="px-4 py-3">
+                <div className="text-sm text-gray-600 mb-1">Call Now</div>
+                <a href={`tel:${siteConfig.brand.phone}`} className="text-lg font-bold text-blue-600 hover:text-blue-800">
+                  {siteConfig.brand.phone}
+                </a>
+              </div>
+            </nav>
           </div>
         </div>
       </header>
@@ -367,7 +506,7 @@ export default function Home() {
       </section>
 
       {/* Customer Reviews Section */}
-      <section className="py-20 bg-gray-50">
+      <section id="reviews" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -455,7 +594,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      <section id="faq" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
