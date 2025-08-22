@@ -63,13 +63,13 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Sticky Header with Phone + CTA */}
-      <header className="bg-white shadow-lg sticky top-0 z-50 border-b-2 border-blue-600">
+      <header className="bg-white shadow-lg sticky top-0 z-50 border-b-2 border-slate-300">
         <div ref={menuRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo and Company Name */}
             <div className="flex items-center space-x-4">
-              <h1 className="text-2xl font-bold text-gray-800">{siteConfig.brand.name}</h1>
-              <span className="hidden lg:block text-sm text-gray-600">| {siteConfig.brand.address}</span>
+              <h1 className="text-2xl font-bold text-slate-800">{siteConfig.brand.name}</h1>
+              <span className="hidden lg:block text-sm text-slate-600">| {siteConfig.brand.address}</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -77,28 +77,28 @@ export default function Home() {
               <a 
                 href="#services" 
                 onClick={(e) => scrollToSection('services', e)}
-                className="text-gray-700 hover:text-blue-600 font-medium transition duration-300 cursor-pointer"
+                className="text-slate-700 hover:text-amber-600 font-medium transition duration-300 cursor-pointer"
               >
                 Services
               </a>
               <a 
                 href="#work" 
                 onClick={(e) => scrollToSection('work', e)}
-                className="text-gray-700 hover:text-blue-600 font-medium transition duration-300 cursor-pointer"
+                className="text-slate-700 hover:text-amber-600 font-medium transition duration-300 cursor-pointer"
               >
                 Gallery
               </a>
               <a 
                 href="#reviews" 
                 onClick={(e) => scrollToSection('reviews', e)}
-                className="text-gray-700 hover:text-blue-600 font-medium transition duration-300 cursor-pointer"
+                className="text-slate-700 hover:text-amber-600 font-medium transition duration-300 cursor-pointer"
               >
                 Reviews
               </a>
               <a 
                 href="#faq" 
                 onClick={(e) => scrollToSection('faq', e)}
-                className="text-gray-700 hover:text-blue-600 font-medium transition duration-300 cursor-pointer"
+                className="text-slate-700 hover:text-amber-600 font-medium transition duration-300 cursor-pointer"
               >
                 FAQ
               </a>
@@ -107,15 +107,15 @@ export default function Home() {
             {/* Desktop Contact Info and CTA */}
             <div className="hidden md:flex items-center space-x-4">
               <div className="text-right">
-                <p className="text-sm text-gray-600">Call Now</p>
-                <a href={`tel:${siteConfig.brand.phone}`} className="text-lg font-bold text-blue-600 hover:text-blue-800">
+                <p className="text-sm text-slate-600">Call Now</p>
+                <a href={`tel:${siteConfig.brand.phone}`} className="text-lg font-bold text-amber-600 hover:text-amber-700">
                   {siteConfig.brand.phone}
                 </a>
               </div>
               <a 
                 href="#contact" 
                 onClick={scrollToContact}
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-lg cursor-pointer"
+                className="bg-slate-800 text-white px-6 py-2 rounded-lg font-semibold hover:bg-slate-700 transition duration-300 shadow-lg cursor-pointer"
               >
                 Free Quote
               </a>
@@ -126,7 +126,7 @@ export default function Home() {
               <a 
                 href="#contact" 
                 onClick={scrollToContact}
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-lg cursor-pointer text-sm"
+                className="bg-slate-800 text-white px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 transition duration-300 shadow-lg cursor-pointer text-sm"
               >
                 Quote
               </a>
@@ -146,38 +146,38 @@ export default function Home() {
 
           {/* Mobile Menu */}
           <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-            <nav className="py-4 space-y-3 border-t border-gray-200">
+            <nav className="py-4 space-y-3 border-t border-slate-200">
               <a 
                 href="#services" 
                 onClick={(e) => scrollToSection('services', e)}
-                className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition duration-300 cursor-pointer"
+                className="block px-4 py-3 text-slate-700 hover:text-amber-600 hover:bg-amber-50 rounded-lg font-medium transition duration-300 cursor-pointer"
               >
                 🏗️ Services
               </a>
               <a 
                 href="#work" 
                 onClick={(e) => scrollToSection('work', e)}
-                className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition duration-300 cursor-pointer"
+                className="block px-4 py-3 text-slate-700 hover:text-amber-600 hover:bg-amber-50 rounded-lg font-medium transition duration-300 cursor-pointer"
               >
                 🖼️ Gallery
               </a>
               <a 
                 href="#reviews" 
                 onClick={(e) => scrollToSection('reviews', e)}
-                className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition duration-300 cursor-pointer"
+                className="block px-4 py-3 text-slate-700 hover:text-amber-600 hover:bg-amber-50 rounded-lg font-medium transition duration-300 cursor-pointer"
               >
                 ⭐ Reviews
               </a>
               <a 
                 href="#faq" 
                 onClick={(e) => scrollToSection('faq', e)}
-                className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition duration-300 cursor-pointer"
+                className="block px-4 py-3 text-slate-700 hover:text-amber-600 hover:bg-amber-50 rounded-lg font-medium transition duration-300 cursor-pointer"
               >
                 ❓ FAQ
               </a>
               <div className="px-4 py-3">
-                <div className="text-sm text-gray-600 mb-1">Call Now</div>
-                <a href={`tel:${siteConfig.brand.phone}`} className="text-lg font-bold text-blue-600 hover:text-blue-800">
+                <div className="text-sm text-slate-600 mb-1">Call Now</div>
+                <a href={`tel:${siteConfig.brand.phone}`} className="text-lg font-bold text-amber-600 hover:text-amber-700">
                   {siteConfig.brand.phone}
                 </a>
               </div>
@@ -200,7 +200,7 @@ export default function Home() {
               console.error('Hero image failed to load:', e);
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 to-slate-800/80"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -214,39 +214,39 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a 
                 href={`tel:${siteConfig.brand.phone}`}
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg flex items-center justify-center"
+                className="bg-white text-slate-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-100 transition duration-300 shadow-lg flex items-center justify-center"
               >
                 📞 Call {siteConfig.brand.phone}
               </a>
               <a 
                 href="#contact" 
                 onClick={scrollToContact}
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition duration-300 cursor-pointer"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-800 transition duration-300 cursor-pointer"
               >
                 ✨ Get Free Estimate
               </a>
             </div>
             <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-xl p-8 max-w-4xl mx-auto border border-white/20 shadow-xl">
               <div className="text-center mb-6">
-                <p className="text-2xl font-bold mb-4 text-gray-800">🏆 Why Choose Us?</p>
-                <p className="text-gray-600 mb-6">Building trust through proven experience and exceptional service</p>
+                <p className="text-2xl font-bold mb-4 text-slate-800">🏆 Why Choose Us?</p>
+                <p className="text-slate-600 mb-6">Building trust through proven experience and exceptional service</p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div className="text-center p-4 bg-gray-50 rounded-lg">
-                  <div className="text-green-600 text-2xl mb-2">✅</div>
-                  <div className="text-gray-800 font-semibold text-base">{siteConfig.brand.license}</div>
+                <div className="text-center p-4 bg-slate-50 rounded-lg">
+                  <div className="text-amber-600 text-2xl mb-2">✅</div>
+                  <div className="text-slate-800 font-semibold text-base">{siteConfig.brand.license}</div>
                 </div>
-                <div className="text-center p-4 bg-gray-50 rounded-lg">
-                  <div className="text-green-600 text-2xl mb-2">✅</div>
-                  <div className="text-gray-800 font-semibold text-base">{siteConfig.brand.yearsExperience} Years Experience</div>
+                <div className="text-center p-4 bg-slate-50 rounded-lg">
+                  <div className="text-amber-600 text-2xl mb-2">✅</div>
+                  <div className="text-slate-800 font-semibold text-base">{siteConfig.brand.yearsExperience} Years Experience</div>
                 </div>
-                <div className="text-center p-4 bg-gray-50 rounded-lg">
-                  <div className="text-green-600 text-2xl mb-2">✅</div>
-                  <div className="text-gray-800 font-semibold text-base">Free Estimates</div>
+                <div className="text-center p-4 bg-slate-50 rounded-lg">
+                  <div className="text-amber-600 text-2xl mb-2">✅</div>
+                  <div className="text-slate-800 font-semibold text-base">Free Estimates</div>
                 </div>
-                <div className="text-center p-4 bg-gray-50 rounded-lg">
-                  <div className="text-green-600 text-2xl mb-2">✅</div>
-                  <div className="text-gray-800 font-semibold text-base">Same Day Service Available</div>
+                <div className="text-center p-4 bg-slate-50 rounded-lg">
+                  <div className="text-amber-600 text-2xl mb-2">✅</div>
+                  <div className="text-slate-800 font-semibold text-base">Same Day Service Available</div>
                 </div>
               </div>
             </div>
@@ -302,21 +302,21 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 gap-8">
             {siteConfig.services.map((service, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300 border-l-4 border-blue-600">
+              <div key={index} className="bg-slate-50 rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300 border-l-4 border-amber-500">
                 <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
+                    <h3 className="text-xl font-semibold text-slate-900 mb-3">{service.title}</h3>
+                    <p className="text-slate-600 mb-4">{service.description}</p>
                     <div className="flex space-x-3">
-                      <a href="#contact" onClick={scrollToContact} className="text-blue-600 font-semibold hover:text-blue-800 cursor-pointer">
+                      <a href="#contact" onClick={scrollToContact} className="text-amber-600 font-semibold hover:text-amber-700 cursor-pointer">
                         Get Quote →
                       </a>
-                      <a href={`tel:${siteConfig.brand.phone}`} className="text-green-600 font-semibold hover:text-green-800">
+                      <a href={`tel:${siteConfig.brand.phone}`} className="text-slate-600 font-semibold hover:text-slate-800">
                         Call Now →
                       </a>
                     </div>
@@ -329,7 +329,7 @@ export default function Home() {
       </section>
 
       {/* CTA Block 1 */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-gradient-to-r from-slate-800 to-slate-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Property?
@@ -340,14 +340,14 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href={`tel:${siteConfig.brand.phone}`}
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg"
+              className="bg-white text-slate-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-100 transition duration-300 shadow-lg"
             >
               📞 Call {siteConfig.brand.phone}
         </a>
         <a
               href="#contact" 
               onClick={scrollToContact}
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition duration-300 cursor-pointer"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-800 transition duration-300 cursor-pointer"
             >
               ✨ Free Estimate
             </a>
@@ -567,7 +567,7 @@ export default function Home() {
       </section>
 
       {/* CTA Block 2 */}
-      <section className="py-16 bg-green-600 text-white">
+      <section className="py-16 bg-gradient-to-r from-amber-600 to-amber-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Limited Time Offer: Free Consultation
@@ -578,14 +578,14 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href={`tel:${siteConfig.brand.phone}`}
-              className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg"
+              className="bg-white text-amber-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-amber-50 transition duration-300 shadow-lg"
             >
               📞 Call Now
         </a>
         <a
               href="#contact" 
               onClick={scrollToContact}
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition duration-300 cursor-pointer"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-amber-700 transition duration-300 cursor-pointer"
             >
               ✨ Book Consultation
             </a>
@@ -655,7 +655,7 @@ export default function Home() {
       </section>
 
       {/* Contact Form Section */}
-      <section id="contact" className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 relative overflow-hidden">
+      <section id="contact" className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -685,7 +685,7 @@ export default function Home() {
                     id="firstName"
                     name="firstName"
                     required
-                    className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:outline-none transition-all duration-300 text-lg"
+                    className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:ring-4 focus:ring-amber-100 focus:border-amber-500 focus:outline-none transition-all duration-300 text-lg"
                     placeholder="Your first name"
                   />
                 </div>
@@ -699,7 +699,7 @@ export default function Home() {
                     id="lastName"
                     name="lastName"
                     required
-                    className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:outline-none transition-all duration-300 text-lg"
+                    className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:ring-4 focus:ring-amber-100 focus:border-amber-500 focus:outline-none transition-all duration-300 text-lg"
                     placeholder="Your last name"
                   />
                 </div>
@@ -715,7 +715,7 @@ export default function Home() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:outline-none transition-all duration-300 text-lg"
+                    className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:ring-4 focus:ring-amber-100 focus:border-amber-500 focus:outline-none transition-all duration-300 text-lg"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -729,7 +729,7 @@ export default function Home() {
                     id="phone"
                     name="phone"
                     required
-                    className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:outline-none transition-all duration-300 text-lg"
+                    className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:ring-4 focus:ring-amber-100 focus:border-amber-500 focus:outline-none transition-all duration-300 text-lg"
                     placeholder="(208) 555-0123"
                   />
                 </div>
@@ -743,7 +743,7 @@ export default function Home() {
                   id="service"
                   name="service"
                   required
-                  className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:outline-none transition-all duration-300 text-lg appearance-none bg-white"
+                  className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 focus:ring-4 focus:ring-amber-100 focus:border-amber-500 focus:outline-none transition-all duration-300 text-lg appearance-none bg-white"
                 >
                   <option value="">Select a service</option>
                   <option value="residential">Residential Fence Installation</option>
@@ -762,7 +762,7 @@ export default function Home() {
                   id="message"
                   name="message"
                   rows={5}
-                  className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:outline-none transition-all duration-300 text-lg resize-none"
+                  className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:ring-4 focus:ring-amber-100 focus:border-amber-500 focus:outline-none transition-all duration-300 text-lg resize-none"
                   placeholder="Tell us about your project, property size, preferred materials, timeline, etc."
                 ></textarea>
               </div>
@@ -770,7 +770,7 @@ export default function Home() {
               <div className="text-center pt-4">
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-12 py-5 rounded-xl font-bold text-xl hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl"
+                  className="bg-gradient-to-r from-amber-600 to-amber-700 text-white px-12 py-5 rounded-xl font-bold text-xl hover:from-amber-700 hover:to-amber-800 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl"
                 >
                   ✨ Send Quote Request
                 </button>
