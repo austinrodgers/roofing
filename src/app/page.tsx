@@ -4,6 +4,20 @@ import Image from 'next/image';
 import { siteConfig } from './config';
 
 export default function Home() {
+  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      const headerHeight = 80; // Approximate height of sticky header
+      const elementPosition = contactSection.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <main className="min-h-screen">
       {/* Sticky Header with Phone + CTA */}
@@ -23,7 +37,8 @@ export default function Home() {
               </div>
               <a 
                 href="#contact" 
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-lg"
+                onClick={scrollToContact}
+                className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-lg cursor-pointer"
               >
                 Free Quote
               </a>
@@ -66,7 +81,8 @@ export default function Home() {
               </a>
               <a 
                 href="#contact" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition duration-300"
+                onClick={scrollToContact}
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition duration-300 cursor-pointer"
               >
                 ✨ Get Free Estimate
               </a>
@@ -158,7 +174,7 @@ export default function Home() {
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                     <p className="text-gray-600 mb-4">{service.description}</p>
                     <div className="flex space-x-3">
-                      <a href="#contact" className="text-blue-600 font-semibold hover:text-blue-800">
+                      <a href="#contact" onClick={scrollToContact} className="text-blue-600 font-semibold hover:text-blue-800 cursor-pointer">
                         Get Quote →
                       </a>
                       <a href={`tel:${siteConfig.brand.phone}`} className="text-green-600 font-semibold hover:text-green-800">
@@ -191,7 +207,8 @@ export default function Home() {
         </a>
         <a
               href="#contact" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition duration-300"
+              onClick={scrollToContact}
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition duration-300 cursor-pointer"
             >
               ✨ Free Estimate
             </a>
@@ -428,7 +445,8 @@ export default function Home() {
         </a>
         <a
               href="#contact" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition duration-300"
+              onClick={scrollToContact}
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition duration-300 cursor-pointer"
             >
               ✨ Book Consultation
             </a>
@@ -498,119 +516,128 @@ export default function Home() {
       </section>
 
       {/* Contact Form Section */}
-      <section id="contact" className="py-20 bg-blue-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="contact" className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          }}></div>
+        </div>
+        
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Get Your Free Quote Today
             </h2>
-            <p className="text-xl opacity-90">
+            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
               Ready to transform your property? Contact us for a free consultation and estimate.
             </p>
           </div>
           
-          <form className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="firstName" className="block text-sm font-medium mb-2">
-                  First Name *
-                </label>
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  required
-                  className="w-full px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-300 focus:outline-none"
-                  placeholder="Your first name"
-                />
+          <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-8 md:p-12">
+            <form className="space-y-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-3">
+                  <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-2">
+                    First Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    required
+                    className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:outline-none transition-all duration-300 text-lg"
+                    placeholder="Your first name"
+                  />
+                </div>
+                
+                <div className="space-y-3">
+                  <label htmlFor="lastName" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Last Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    required
+                    className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:outline-none transition-all duration-300 text-lg"
+                    placeholder="Your last name"
+                  />
+                </div>
               </div>
               
-              <div>
-                <label htmlFor="lastName" className="block text-sm font-medium mb-2">
-                  Last Name *
-                </label>
-                <input
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  required
-                  className="w-full px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-300 focus:outline-none"
-                  placeholder="Your last name"
-                />
-              </div>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-300 focus:outline-none"
-                  placeholder="your.email@example.com"
-                />
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-3">
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Email Address <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:outline-none transition-all duration-300 text-lg"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+                
+                <div className="space-y-3">
+                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Phone Number <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:outline-none transition-all duration-300 text-lg"
+                    placeholder="(208) 555-0123"
+                  />
+                </div>
               </div>
               
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                  Phone Number *
+              <div className="space-y-3">
+                <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Service Needed <span className="text-red-500">*</span>
                 </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
+                <select
+                  id="service"
+                  name="service"
                   required
-                  className="w-full px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-300 focus:outline-none"
-                  placeholder="(208) 555-0123"
-                />
+                  className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:outline-none transition-all duration-300 text-lg appearance-none bg-white"
+                >
+                  <option value="">Select a service</option>
+                  <option value="residential">Residential Fence Installation</option>
+                  <option value="commercial">Commercial Fence Services</option>
+                  <option value="pool">Pool Fence Installation</option>
+                  <option value="repair">Fence Repair & Maintenance</option>
+                  <option value="other">Other</option>
+                </select>
               </div>
-            </div>
-            
-            <div>
-              <label htmlFor="service" className="block text-sm font-medium mb-2">
-                Service Needed *
-              </label>
-              <select
-                id="service"
-                name="service"
-                required
-                className="w-full px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-300 focus:outline-none"
-              >
-                <option value="">Select a service</option>
-                <option value="residential">Residential Fence Installation</option>
-                <option value="commercial">Commercial Fence Services</option>
-                <option value="pool">Pool Fence Installation</option>
-                <option value="repair">Fence Repair & Maintenance</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-2">
-                Project Details
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className="w-full px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-300 focus:outline-none"
-                placeholder="Tell us about your project, property size, preferred materials, timeline, etc."
-              ></textarea>
-            </div>
-            
-            <div className="text-center">
-              <button
-                type="submit"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg"
-              >
-                Send Quote Request
-              </button>
-            </div>
-          </form>
+              
+              <div className="space-y-3">
+                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Project Details
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 placeholder-gray-500 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:outline-none transition-all duration-300 text-lg resize-none"
+                  placeholder="Tell us about your project, property size, preferred materials, timeline, etc."
+                ></textarea>
+              </div>
+              
+              <div className="text-center pt-4">
+                <button
+                  type="submit"
+                  className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-12 py-5 rounded-xl font-bold text-xl hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl"
+                >
+                  ✨ Send Quote Request
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
 
