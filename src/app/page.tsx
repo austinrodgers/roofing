@@ -55,8 +55,7 @@ export default function Home() {
               Boise&apos;s #1 Fencing Company
             </h2>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Professional fence installation, repair, and maintenance serving the entire Treasure Valley. 
-              {siteConfig.brand.yearsExperience} years of experience, {siteConfig.brand.projectsCompleted} projects completed.
+              Professional fence installation, repair, and maintenance serving Treasure Valley for 25+ years
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a 
@@ -72,13 +71,28 @@ export default function Home() {
                 ✨ Get Free Estimate
               </a>
             </div>
-            <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto border border-white/20 shadow-lg">
-              <p className="text-lg font-semibold mb-2 text-gray-800">🏆 Why Choose Us?</p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                <div className="text-gray-700 font-medium">✅ {siteConfig.brand.license}</div>
-                <div className="text-gray-700 font-medium">✅ {siteConfig.brand.yearsExperience} Years Experience</div>
-                <div className="text-gray-700 font-medium">✅ Free Estimates</div>
-                <div className="text-gray-700 font-medium">✅ Same Day Service Available</div>
+            <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-xl p-8 max-w-4xl mx-auto border border-white/20 shadow-xl">
+              <div className="text-center mb-6">
+                <p className="text-2xl font-bold mb-4 text-gray-800">🏆 Why Choose Us?</p>
+                <p className="text-gray-600 mb-6">Building trust through proven experience and exceptional service</p>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <div className="text-green-600 text-2xl mb-2">✅</div>
+                  <div className="text-gray-800 font-semibold text-base">{siteConfig.brand.license}</div>
+                </div>
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <div className="text-green-600 text-2xl mb-2">✅</div>
+                  <div className="text-gray-800 font-semibold text-base">{siteConfig.brand.yearsExperience} Years Experience</div>
+                </div>
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <div className="text-green-600 text-2xl mb-2">✅</div>
+                  <div className="text-gray-800 font-semibold text-base">Free Estimates</div>
+                </div>
+                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <div className="text-green-600 text-2xl mb-2">✅</div>
+                  <div className="text-gray-800 font-semibold text-base">Same Day Service Available</div>
+                </div>
               </div>
             </div>
           </div>
