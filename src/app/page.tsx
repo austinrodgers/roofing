@@ -281,7 +281,7 @@ export default function Home() {
               <div key={location} className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
                 <div className="text-blue-500 text-3xl mb-3">📍</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{location}</h3>
-                <p className="text-sm text-gray-600">Roofing Services</p>
+                <p className="text-sm text-gray-600">Professional Service</p>
               </div>
             ))}
           </div>
