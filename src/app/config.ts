@@ -1,9 +1,9 @@
 export const siteConfig = {
   brand: {
-    name: "Premier Fencing Solutions",
-    tagline: "Boise's Trusted Fencing Experts",
+    name: "Premier Roofing Solutions",
+    tagline: "Boise's Trusted Roofing Experts",
     phone: "(208) 555-0123",
-    email: "info@premierfencingboise.com",
+    email: "info@premierroofingboise.com",
     address: "Boise, Idaho",
     serviceArea: "Boise, Meridian, Nampa, Eagle, Caldwell, Garden City, Kuna, Star, Middleton",
     license: "Licensed & Insured #12345",
@@ -12,24 +12,24 @@ export const siteConfig = {
   },
   services: [
     {
-      title: "Residential Fence Installation",
-      description: "Custom privacy fences, picket fences, and decorative fencing for Boise homes",
-      keywords: "residential fence installation, privacy fence, picket fence, Boise fencing"
+      title: "Residential Roof Installation",
+      description: "Complete roof replacement, shingle installation, and residential roofing solutions for Boise homes",
+      keywords: "residential roof installation, roof replacement, shingle installation, Boise roofing"
     },
     {
-      title: "Commercial Fence Services",
-      description: "Security fencing, industrial barriers, and business property protection",
-      keywords: "commercial fencing, security fence, industrial fencing, Boise business fencing"
+      title: "Commercial Roofing Services",
+      description: "Flat roof systems, metal roofing, and commercial building protection solutions",
+      keywords: "commercial roofing, flat roof, metal roofing, Boise business roofing"
     },
     {
-      title: "Pool Fence Installation",
-      description: "Safety-compliant pool fencing meeting Idaho safety standards",
-      keywords: "pool fence, safety fence, Idaho pool safety, Boise pool fencing"
+      title: "Roof Repair & Maintenance",
+      description: "Emergency repairs, leak fixes, and preventive maintenance to protect your investment",
+      keywords: "roof repair, roof maintenance, leak repair, Boise roof service"
     },
     {
-      title: "Fence Repair & Maintenance",
-      description: "Quick repairs, gate fixes, and ongoing maintenance services",
-      keywords: "fence repair, fence maintenance, gate repair, Boise fence service"
+      title: "Storm Damage Restoration",
+      description: "Insurance claim assistance and storm damage repair for Treasure Valley properties",
+      keywords: "storm damage, roof restoration, insurance claims, Boise storm repair"
     }
   ],
   locations: [

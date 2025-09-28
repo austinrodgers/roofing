@@ -152,7 +152,7 @@ export default function Home() {
                 onClick={(e) => scrollToSection('services', e)}
                 className="block px-4 py-3 text-slate-700 hover:text-amber-600 hover:bg-amber-50 rounded-lg font-medium transition duration-300 cursor-pointer"
               >
-                🏗️ Services
+                🏠 Services
               </a>
               <a 
                 href="#work" 
@@ -192,7 +192,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <Image 
             src="/pictures/Hero 2.jpg" 
-            alt="Professional fencing installation in Boise, Idaho"
+            alt="Professional roofing installation in Boise, Idaho"
             fill
             className="object-cover"
             priority
@@ -206,10 +206,10 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              Boise&apos;s #1 Fencing Company
+              Boise&apos;s #1 Roofing Company
             </h2>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Professional fence installation, repair, and maintenance serving Treasure Valley for 25+ years
+              Professional roof installation, repair, and maintenance serving Treasure Valley for 25+ years
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a 
@@ -272,7 +272,7 @@ export default function Home() {
               Serving the Entire Treasure Valley
             </h2>
             <p className="text-xl text-gray-600">
-              Professional fencing services throughout {siteConfig.locations.join(', ')}
+              Professional roofing services throughout {siteConfig.locations.join(', ')}
             </p>
           </div>
           
@@ -281,7 +281,7 @@ export default function Home() {
               <div key={location} className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
                 <div className="text-blue-500 text-3xl mb-3">📍</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{location}</h3>
-                <p className="text-sm text-gray-600">Fencing Services</p>
+                <p className="text-sm text-gray-600">Roofing Services</p>
               </div>
             ))}
           </div>
@@ -293,10 +293,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Professional Fencing Services in Boise, Idaho
+              Professional Roofing Services in Boise, Idaho
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From residential privacy fences to commercial security solutions, we&apos;re your trusted fencing contractor in the Treasure Valley
+              From residential roof replacement to commercial roofing solutions, we&apos;re your trusted roofing contractor in the Treasure Valley
             </p>
           </div>
           
@@ -335,7 +335,7 @@ export default function Home() {
             Ready to Transform Your Property?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Get your free estimate today! We serve {siteConfig.brand.serviceArea} with professional fencing solutions.
+            Get your free estimate today! We serve {siteConfig.brand.serviceArea} with professional roofing solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
@@ -360,7 +360,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Recent Fencing Projects in Boise
+              Recent Roofing Projects in Boise
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               See examples of our quality workmanship throughout the Treasure Valley
@@ -372,7 +372,7 @@ export default function Home() {
               <div className="h-64 overflow-hidden relative">
                 <Image 
                   src="/pictures/Residential fence.jpg" 
-                  alt="Modern privacy fence installation in Eagle, Idaho"
+                  alt="Modern residential roof installation in Eagle, Idaho"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
                   onError={(e) => {
@@ -381,8 +381,8 @@ export default function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Modern Privacy Fence - Eagle, ID</h3>
-                <p className="text-gray-600 mb-3">6-foot cedar privacy fence</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Modern Residential Roof - Eagle, ID</h3>
+                <p className="text-gray-600 mb-3">Architectural shingle roof replacement</p>
                 <p className="text-sm text-blue-600 font-semibold">Completed in 2 days</p>
               </div>
             </div>
@@ -391,7 +391,7 @@ export default function Home() {
               <div className="h-64 overflow-hidden relative">
                 <Image 
                   src="/pictures/pool fence.jpg" 
-                  alt="Safety-compliant pool fencing in Meridian, Idaho"
+                  alt="Commercial flat roof installation in Meridian, Idaho"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
                   onError={(e) => {
@@ -400,9 +400,9 @@ export default function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Pool Safety Fence - Meridian, ID</h3>
-                <p className="text-gray-600 mb-3">Safety-compliant aluminum pool fencing with decorative elements</p>
-                <p className="text-sm text-green-600 font-semibold">Safety certified</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Commercial Flat Roof - Meridian, ID</h3>
+                <p className="text-gray-600 mb-3">EPDM membrane roofing system with proper drainage</p>
+                <p className="text-sm text-green-600 font-semibold">Weather resistant</p>
               </div>
             </div>
             
@@ -410,7 +410,7 @@ export default function Home() {
               <div className="h-64 overflow-hidden relative">
                 <Image 
                   src="/pictures/Commerical fence.jpeg" 
-                  alt="Commercial security fencing in Nampa, Idaho"
+                  alt="Metal roofing installation in Nampa, Idaho"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
                   onError={(e) => {
@@ -419,9 +419,9 @@ export default function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Commercial Security Fence - Nampa, ID</h3>
-                <p className="text-gray-600 mb-3">High-security fencing for business property protection</p>
-                <p className="text-sm text-purple-600 font-semibold">Industrial grade</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Metal Roof Installation - Nampa, ID</h3>
+                <p className="text-gray-600 mb-3">Standing seam metal roofing for maximum durability</p>
+                <p className="text-sm text-purple-600 font-semibold">50-year warranty</p>
               </div>
             </div>
           </div>
@@ -445,7 +445,7 @@ export default function Home() {
               <div className="h-80 overflow-hidden relative">
                 <Image 
                   src="/pictures/pic 1.jpg" 
-                  alt="Professional fence installation project in Boise area"
+                  alt="Professional roof installation project in Boise area"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
                   onError={(e) => {
@@ -454,8 +454,8 @@ export default function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Custom Fence Design</h3>
-                <p className="text-gray-600">Beautiful custom fencing solution showcasing our attention to detail and quality materials.</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Custom Roof Design</h3>
+                <p className="text-gray-600">Beautiful custom roofing solution showcasing our attention to detail and quality materials.</p>
               </div>
             </div>
             
@@ -463,7 +463,7 @@ export default function Home() {
               <div className="h-80 overflow-hidden relative">
                 <Image 
                   src="/pictures/pic 2.jpg" 
-                  alt="Professional fence installation project in Treasure Valley"
+                  alt="Professional roof installation project in Treasure Valley"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
                   onError={(e) => {
@@ -473,7 +473,7 @@ export default function Home() {
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Expert Installation</h3>
-                <p className="text-gray-600">Professional fence installation demonstrating our skilled craftsmanship and precision work.</p>
+                <p className="text-gray-600">Professional roof installation demonstrating our skilled craftsmanship and precision work.</p>
               </div>
             </div>
           </div>
@@ -527,7 +527,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-700 mb-4">
-                &ldquo;Premier Fencing did an amazing job on our privacy fence in Eagle. Professional, 
+                &ldquo;Premier Roofing did an amazing job on our roof replacement in Eagle. Professional, 
                 on-time, and the quality is outstanding. Highly recommend!&rdquo;
               </p>
               <p className="font-semibold text-gray-900">- Sarah M., Eagle, ID</p>
@@ -543,7 +543,7 @@ export default function Home() {
               </div>
               <p className="text-gray-700 mb-4">
                 &ldquo;Fast service, fair pricing, and excellent workmanship. They repaired 
-                our damaged fence in Meridian quickly and it looks better than new.&rdquo;
+                our storm-damaged roof in Meridian quickly and it looks better than new.&rdquo;
               </p>
               <p className="font-semibold text-gray-900">- Mike R., Meridian, ID</p>
             </div>
@@ -558,7 +558,7 @@ export default function Home() {
               </div>
               <p className="text-gray-700 mb-4">
                 &ldquo;Outstanding customer service from start to finish. The team was 
-                professional, clean, and completed our project in Boise ahead of schedule.&rdquo;
+                professional, clean, and completed our roofing project in Boise ahead of schedule.&rdquo;
               </p>
               <p className="font-semibold text-gray-900">- Jennifer L., Boise, ID</p>
             </div>
@@ -601,17 +601,17 @@ export default function Home() {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600">
-              Get answers to common questions about our fencing services in Boise
+              Get answers to common questions about our roofing services in Boise
             </p>
           </div>
           
           <div className="space-y-6">
             <div className="bg-gray-50 rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                How long does fence installation typically take in Boise?
+                How long does roof installation typically take in Boise?
               </h3>
               <p className="text-gray-600">
-                Most residential fence installations take 1-3 days depending on the size and complexity. 
+                Most residential roof installations take 1-3 days depending on the size and complexity. 
                 We&apos;ll provide a detailed timeline during your consultation.
               </p>
             </div>
@@ -623,7 +623,7 @@ export default function Home() {
                     Do you offer financing options?
                   </h3>
                   <p className="text-gray-600">
-                    Yes, we offer flexible financing options to make your fencing project affordable. 
+                    Yes, we offer flexible financing options to make your roofing project affordable. 
                     Contact us to learn about our current financing programs.
                   </p>
                 </div>
@@ -633,10 +633,10 @@ export default function Home() {
             
             <div className="bg-gray-50 rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                What types of materials do you work with?
+                What types of roofing materials do you work with?
               </h3>
               <p className="text-gray-600">
-                We install wood, vinyl, aluminum, chain-link, and wrought iron fences. 
+                We install asphalt shingles, metal roofing, tile, slate, and flat roof systems. 
                 We can help you choose the best material for your needs and budget.
               </p>
             </div>
@@ -746,10 +746,10 @@ export default function Home() {
                   className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 text-gray-900 focus:ring-4 focus:ring-amber-100 focus:border-amber-500 focus:outline-none transition-all duration-300 text-lg appearance-none bg-white"
                 >
                   <option value="">Select a service</option>
-                  <option value="residential">Residential Fence Installation</option>
-                  <option value="commercial">Commercial Fence Services</option>
-                  <option value="pool">Pool Fence Installation</option>
-                  <option value="repair">Fence Repair & Maintenance</option>
+                  <option value="residential">Residential Roof Installation</option>
+                  <option value="commercial">Commercial Roofing Services</option>
+                  <option value="repair">Roof Repair & Maintenance</option>
+                  <option value="storm">Storm Damage Restoration</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -787,7 +787,7 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-bold mb-4">{siteConfig.brand.name}</h3>
               <p className="text-gray-400 mb-4">
-                Boise&apos;s trusted fencing experts serving the entire Treasure Valley.
+                Boise&apos;s trusted roofing experts serving the entire Treasure Valley.
               </p>
               <div className="space-y-2 text-gray-400">
                 <p>📞 {siteConfig.brand.phone}</p>
@@ -799,10 +799,10 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Residential Fence Installation</li>
-                <li>Commercial Fence Services</li>
-                <li>Pool Fence Installation</li>
-                <li>Repair & Maintenance</li>
+                <li>Residential Roof Installation</li>
+                <li>Commercial Roofing Services</li>
+                <li>Roof Repair & Maintenance</li>
+                <li>Storm Damage Restoration</li>
                 <li>Free Estimates</li>
               </ul>
             </div>
