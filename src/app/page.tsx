@@ -371,7 +371,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="h-64 overflow-hidden relative">
                 <Image 
-                  src="/pictures/Residential fence.jpg" 
+                  src="/pictures/Residential roof.jpg" 
                   alt="Modern residential roof installation in Eagle, Idaho"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
@@ -382,7 +382,7 @@ export default function Home() {
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Modern Residential Roof - Eagle, ID</h3>
-                <p className="text-gray-600 mb-3">Architectural shingle roof replacement</p>
+                <p className="text-gray-600 mb-3">High-quality residential roof installation with premium materials</p>
                 <p className="text-sm text-blue-600 font-semibold">Completed in 2 days</p>
               </div>
             </div>
@@ -390,7 +390,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="h-64 overflow-hidden relative">
                 <Image 
-                  src="/pictures/pool fence.jpg" 
+                  src="/pictures/commercial roof.jpg" 
                   alt="Commercial flat roof installation in Meridian, Idaho"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
@@ -400,8 +400,8 @@ export default function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Commercial Flat Roof - Meridian, ID</h3>
-                <p className="text-gray-600 mb-3">EPDM membrane roofing system with proper drainage</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Commercial Roof Installation - Meridian, ID</h3>
+                <p className="text-gray-600 mb-3">Professional commercial roofing system with superior durability</p>
                 <p className="text-sm text-green-600 font-semibold">Weather resistant</p>
               </div>
             </div>
@@ -409,7 +409,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="h-64 overflow-hidden relative">
                 <Image 
-                  src="/pictures/Commerical fence.jpeg" 
+                  src="/pictures/metal roof.jpg" 
                   alt="Metal roofing installation in Nampa, Idaho"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
@@ -420,7 +420,7 @@ export default function Home() {
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Metal Roof Installation - Nampa, ID</h3>
-                <p className="text-gray-600 mb-3">Standing seam metal roofing for maximum durability</p>
+                <p className="text-gray-600 mb-3">Premium metal roofing system for maximum protection</p>
                 <p className="text-sm text-purple-600 font-semibold">50-year warranty</p>
               </div>
             </div>
@@ -444,7 +444,7 @@ export default function Home() {
             <div className="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
               <div className="h-80 overflow-hidden relative">
                 <Image 
-                  src="/pictures/pic 1.jpg" 
+                  src="/pictures/Architectural shingle.jpg" 
                   alt="Professional roof installation project in Boise area"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
@@ -454,7 +454,7 @@ export default function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Custom Roof Design</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Architectural Shingle Design</h3>
                 <p className="text-gray-600">Beautiful custom roofing solution showcasing our attention to detail and quality materials.</p>
               </div>
             </div>
@@ -462,7 +462,7 @@ export default function Home() {
             <div className="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
               <div className="h-80 overflow-hidden relative">
                 <Image 
-                  src="/pictures/pic 2.jpg" 
+                  src="/pictures/Professional Installation.jpg" 
                   alt="Professional roof installation project in Treasure Valley"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
@@ -472,8 +472,8 @@ export default function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Expert Installation</h3>
-                <p className="text-gray-600">Professional roof installation demonstrating our skilled craftsmanship and precision work.</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Professional Installation</h3>
+                <p className="text-gray-600">Expert roof installation demonstrating our skilled craftsmanship and precision work.</p>
               </div>
             </div>
           </div>
