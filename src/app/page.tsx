@@ -191,7 +191,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image 
-            src="/pictures/Hero%202.jpg" 
+            src="/pictures/Hero 2.jpg" 
             alt="Professional roofing installation in Boise, Idaho"
             fill
             className="object-cover"
@@ -259,7 +259,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image 
-            src="/pictures/treasure%20valley.jpg" 
+            src="/pictures/treasure valley.jpg" 
             alt="Treasure Valley landscape"
             fill
             className="object-cover opacity-20"
@@ -371,7 +371,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="h-64 overflow-hidden relative">
                 <Image 
-                  src="/pictures/Residential%20roof.jpg" 
+                  src="/pictures/Residential roof.jpg" 
                   alt="Modern residential roof installation in Eagle, Idaho"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
@@ -390,7 +390,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="h-64 overflow-hidden relative">
                 <Image 
-                  src="/pictures/commercial%20roof.jpg" 
+                  src="/pictures/commercial roof.jpg" 
                   alt="Commercial flat roof installation in Meridian, Idaho"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
@@ -409,7 +409,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="h-64 overflow-hidden relative">
                 <Image 
-                  src="/pictures/metal%20roof.jpg" 
+                  src="/pictures/metal roof.jpg" 
                   alt="Metal roofing installation in Nampa, Idaho"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
@@ -444,7 +444,7 @@ export default function Home() {
             <div className="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
               <div className="h-80 overflow-hidden relative">
                 <Image 
-                  src="/pictures/Architectural%20shingle.jpg" 
+                  src="/pictures/Architectural shingle.jpg" 
                   alt="Professional roof installation project in Boise area"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
@@ -462,7 +462,7 @@ export default function Home() {
             <div className="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
               <div className="h-80 overflow-hidden relative">
                 <Image 
-                  src="/pictures/Professional%20Installation.jpg" 
+                  src="/pictures/Professional Installation.jpg" 
                   alt="Professional roof installation project in Treasure Valley"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
